@@ -1,0 +1,202 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "iori/monotext",
+	"title": "Text Line",
+	"parent": ["iori/monolayer"],
+	"category": "monoblock",
+	"description": "Movable text line",
+	"keywords": ["title", "subtitle", "crop", "mask"],
+	"textdomain": "monoblock",
+	"attributes": {
+		"visibility": {
+			"type": "boolean",
+			"default": true
+		},
+		"hasParallax": {
+			"type": "boolean",
+			"default": false
+		},
+		"isRepeated": {
+			"type": "boolean",
+			"default": false
+		},
+		"url": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaid": {
+			"type": "number"
+		},
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "p",
+			"default": "Free Text",
+			"__experimentalRole": "content"
+		},
+		"strokeWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"strokeColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"strokeColorCode": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"placeholder": {
+			"type": "string",
+			"default": "Free Text"
+		},
+		"blockName": {
+			"type": "string",
+			"default": "Text Line"
+		},
+		"left": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 10, "unit": "px", "use": true },
+				"Tablet": { "value": 10, "unit": "px", "use": true },
+				"Mobile": { "value": 10, "unit": "px", "use": true },
+				"isResponsive": false
+			}
+		},
+		"top": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 10, "unit": "px", "use": true },
+				"Tablet": { "value": 10, "unit": "px", "use": true },
+				"Mobile": { "value": 10, "unit": "px", "use": true },
+				"isResponsive": false
+			}
+		},
+		"right": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 10, "unit": "px", "use": false },
+				"Tablet": { "value": 10, "unit": "px", "use": false },
+				"Mobile": { "value": 10, "unit": "px", "use": false },
+				"isResponsive": false
+			}
+		},
+		"bottom": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 10, "unit": "px", "use": false },
+				"Tablet": { "value": 10, "unit": "px", "use": false },
+				"Mobile": { "value": 10, "unit": "px", "use": false },
+				"isResponsive": false
+			}
+		},
+		"horizontalAlign": {
+			"type": "object",
+			"default": {
+				"Desktop": { "use": false },
+				"Tablet": { "use": false },
+				"Mobile": { "use": false },
+				"isResponsive": false
+			}
+		},
+		"verticalAlign": {
+			"type": "object",
+			"default": {
+				"Desktop": { "use": false },
+				"Tablet": { "use": false },
+				"Mobile": { "use": false },
+				"isResponsive": false
+			}
+		},
+		"rotate": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 0, "unit": "deg" },
+				"Tablet": { "value": 0, "unit": "deg" },
+				"Mobile": { "value": 0, "unit": "deg" },
+				"isResponsive": false
+			}
+		},
+		"size": {
+			"type": "object",
+			"default": {
+				"Desktop": {
+					"value": 50,
+					"unit": "px",
+					"min": null,
+					"minUnit": "px",
+					"max": null,
+					"maxUnit": "px",
+					"fluid": false,
+					"minMax": false
+				},
+				"Tablet": {
+					"value": 50,
+					"unit": "px",
+					"min": null,
+					"minUnit": "px",
+					"max": null,
+					"maxUnit": "px",
+					"fluid": false,
+					"minMax": false
+				},
+				"Mobile": {
+					"value": 50,
+					"unit": "px",
+					"min": null,
+					"minUnit": "px",
+					"max": null,
+					"maxUnit": "px",
+					"fluid": false,
+					"minMax": false
+				},
+				"isResponsive": false
+			}
+		},
+		"overlayColor": {
+			"type": "string"
+		},
+		"customOverlayColor": {
+			"type": "string"
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"customGradient": {
+			"type": "string"
+		},
+		"fontFamily": {
+			"type": "string"
+		},
+		"fontStyle": {
+			"type": "string"
+		},
+		"fontWeight": {
+			"type": "string"
+		},
+		"letterSpacing": {
+			"type": "string"
+		},
+		"textDecoration": {
+			"type": "string"
+		},
+		"textTransform": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"className": false,
+		"__experimentalSelector": "p",
+		"__unstablePasteTextInline": false,
+		"__experimentalSlashInserter": false
+	},
+	"usesContext": [
+		"monoblock/userSelectedColors",
+		"monoblock/userSelectedGradients",
+		"monoblock/id"
+	],
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

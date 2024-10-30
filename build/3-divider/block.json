@@ -1,0 +1,87 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "iori/monodivider",
+	"parent": ["iori/monolayer"],
+	"title": "Divider",
+	"category": "monoblock",
+	"version": "1.0.0",
+	"description": "Shape dividers library",
+	"attributes": {
+		"visibility": {
+			"type": "boolean",
+			"default": true
+		},
+		"flip": {
+			"type": "boolean",
+			"default": false
+		},
+		"blockName": {
+			"type": "string",
+			"default": "Divider"
+		},
+		"customColor": {
+			"type": "string"
+		},
+		"color": {
+			"type": "string"
+		},
+		"position": {
+			"type": "string",
+			"default": "bottom"
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"customGradient": {
+			"type": "string"
+		},
+		"dimRatio": {
+			"type": "number",
+			"default": 50
+		},
+		"shape": {
+			"type": "number",
+			"default": 1
+		},
+		"width": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 100, "unit": "%" },
+				"Tablet": { "value": 100, "unit": "%" },
+				"Mobile": { "value": 100, "unit": "%" },
+				"isResponsive": false
+			}
+		},
+		"height": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 100, "unit": "px" },
+				"Tablet": { "value": 100, "unit": "px" },
+				"Mobile": { "value": 100, "unit": "px" },
+				"isResponsive": false
+			}
+		},
+		"ratio": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": ["none", null] },
+				"Tablet": { "value": ["none", null] },
+				"Mobile": { "value": ["none", null] },
+				"isResponsive": false
+			}
+		}
+	},
+	"usesContext": [
+		"monoblock/userSelectedColors",
+		"monoblock/userSelectedGradients",
+		"monoblock/id"
+	],
+	"supports": {
+		"html": false
+	},
+	"textdomain": "monoblock",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

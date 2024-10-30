@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "iori/monoeffects",
+	"parent": ["iori/monoblock"],
+	"title": "Effects",
+	"category": "monoblock",
+	"version": "1.0.0",
+	"description": "Effects library",
+	"attributes": {
+		"visibility": {
+			"type": "boolean",
+			"default": true
+		},
+		"blockName": {
+			"type": "string",
+			"default": "Effects"
+		}
+	},
+	"usesContext": ["monoblock/userSelectedColors", "monoblock/id"],
+	"supports": {
+		"html": false
+	},
+	"textdomain": "monoblock",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

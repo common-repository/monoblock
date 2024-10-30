@@ -1,0 +1,293 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "iori/monopicture",
+	"parent": ["iori/monolayer"],
+	"version": "1.0.0",
+	"title": "Picture",
+	"category": "monoblock",
+	"description": "Add image or shape and select mask or filter.",
+	"supports": {
+		"html": false,
+		"color": {
+			"text": false,
+			"background": false
+		}
+	},
+	"attributes": {
+		"visibility": {
+			"type": "boolean",
+			"default": true
+		},
+		"left": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 10, "unit": "px", "use": true },
+				"Tablet": { "value": 10, "unit": "px", "use": true },
+				"Mobile": { "value": 10, "unit": "px", "use": true },
+				"isResponsive": false
+			}
+		},
+		"top": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 10, "unit": "px", "use": true },
+				"Tablet": { "value": 10, "unit": "px", "use": true },
+				"Mobile": { "value": 10, "unit": "px", "use": true },
+				"isResponsive": false
+			}
+		},
+		"right": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 10, "unit": "px", "use": false },
+				"Tablet": { "value": 10, "unit": "px", "use": false },
+				"Mobile": { "value": 10, "unit": "px", "use": false },
+				"isResponsive": false
+			}
+		},
+		"bottom": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 10, "unit": "px", "use": false },
+				"Tablet": { "value": 10, "unit": "px", "use": false },
+				"Mobile": { "value": 10, "unit": "px", "use": false },
+				"isResponsive": false
+			}
+		},
+		"horizontalAlign": {
+			"type": "object",
+			"default": {
+				"Desktop": { "use": false },
+				"Tablet": { "use": false },
+				"Mobile": { "use": false },
+				"isResponsive": false
+			}
+		},
+		"verticalAlign": {
+			"type": "object",
+			"default": {
+				"Desktop": { "use": false },
+				"Tablet": { "use": false },
+				"Mobile": { "use": false },
+				"isResponsive": false
+			}
+		},
+		"rotate": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 0 },
+				"Tablet": { "value": 0 },
+				"Mobile": { "value": 0 },
+				"isResponsive": false
+			}
+		},
+		"skewX": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 0 },
+				"Tablet": { "value": 0 },
+				"Mobile": { "value": 0 },
+				"isResponsive": false
+			}
+		},
+		"skewY": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 0 },
+				"Tablet": { "value": 0 },
+				"Mobile": { "value": 0 },
+				"isResponsive": false
+			}
+		},
+		"width": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 500, "unit": "px" },
+				"Tablet": { "value": 500, "unit": "px" },
+				"Mobile": { "value": 500, "unit": "px" },
+				"isResponsive": false
+			}
+		},
+		"height": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 500, "unit": "px" },
+				"Tablet": { "value": 500, "unit": "px" },
+				"Mobile": { "value": 500, "unit": "px" },
+				"isResponsive": false
+			}
+		},
+		"blockName": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string",
+			"__experimentalRole": "content"
+		},
+		"id": {
+			"type": "string"
+		},
+		"maskId": {
+			"type": "string"
+		},
+		"alt": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "alt",
+			"__experimentalRole": "content"
+		},
+		"objectFit": {
+			"type": "string",
+			"default": "cover"
+		},
+		"borderRadius": {
+			"type": "object",
+			"default": {
+				"Desktop": {
+					"value": [
+						"%",
+						null,
+						null,
+						null,
+						null,
+						null,
+						null,
+						null,
+						null,
+						true,
+						false,
+						false
+					]
+				},
+				"Tablet": {
+					"value": [
+						"%",
+						null,
+						null,
+						null,
+						null,
+						null,
+						null,
+						null,
+						null,
+						true,
+						false,
+						false
+					]
+				},
+				"Mobile": {
+					"value": [
+						"%",
+						null,
+						null,
+						null,
+						null,
+						null,
+						null,
+						null,
+						null,
+						true,
+						false,
+						false
+					]
+				},
+				"isResponsive": false
+			}
+		},
+		"backgroundType": {
+			"type": "string"
+		},
+		"originalRatio": {
+			"type": "number"
+		},
+		"ratio": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": ["none", null] },
+				"Tablet": { "value": ["none", null] },
+				"Mobile": { "value": ["none", null] },
+				"isResponsive": false
+			}
+		},
+		"focalPoint": {
+			"type": "object",
+			"default": { "x": 0.5, "y": 0.5 }
+		},
+		"maskType": {
+			"type": "string"
+		},
+		"maskParams": {
+			"type": "object"
+		},
+		"clipPath": {
+			"type": "array"
+		},
+		"svgPath": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "path",
+			"attribute": "d"
+		},
+		"randomness": {
+			"type": "number"
+		},
+		"edges": {
+			"type": "number"
+		},
+		"scale": {
+			"type": "number"
+		},
+		"translateX": {
+			"type": "number"
+		},
+		"translateY": {
+			"type": "number"
+		},
+		"maskRadius": {
+			"type": "number"
+		},
+		"zoom": {
+			"type": "number"
+		},
+		"filter": {
+			"type": "array",
+			"default": [null, null, null, null, null, null]
+		},
+		"shadow": {
+			"type": "array",
+			"default": [null, null, null, null]
+		},
+		"bgrColor": {
+			"type": "string"
+		},
+		"customBgrColor": {
+			"type": "string"
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"customGradient": {
+			"type": "string"
+		},
+		"outline": {
+			"type": "object"
+		},
+		"hasOverlay": {
+			"type": "boolean"
+		},
+		"blendMode": {
+			"type": "string"
+		}
+	},
+	"usesContext": [
+		"monoblock/userSelectedColors",
+		"monoblock/userSelectedGradients",
+		"monoblock/id"
+	],
+	"textdomain": "monoblock",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

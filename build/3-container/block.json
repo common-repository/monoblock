@@ -1,0 +1,178 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "iori/monocontainer",
+	"parent": ["iori/monolayer"],
+	"version": "1.0.0",
+	"title": "Wrapper / Container",
+	"category": "monoblock",
+	"description": "Oraganize content into one container.",
+	"supports": {
+		"html": false,
+		"color": {
+			"text": false,
+			"background": false
+		}
+	},
+	"attributes": {
+		"visibility": {
+			"type": "boolean",
+			"default": true
+		},
+		"left": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 25, "unit": "px", "use": true },
+				"Tablet": { "value": 25, "unit": "px", "use": true },
+				"Mobile": { "value": 25, "unit": "px", "use": true },
+				"isResponsive": false
+			}
+		},
+		"right": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 25, "unit": "px", "use": false },
+				"Tablet": { "value": 25, "unit": "px", "use": false },
+				"Mobile": { "value": 25, "unit": "px", "use": false },
+				"isResponsive": false
+			}
+		},
+		"top": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 25, "unit": "px", "use": true },
+				"Tablet": { "value": 25, "unit": "px", "use": true },
+				"Mobile": { "value": 25, "unit": "px", "use": true },
+				"isResponsive": false
+			}
+		},
+		"bottom": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 25, "unit": "px", "use": false },
+				"Tablet": { "value": 25, "unit": "px", "use": false },
+				"Mobile": { "value": 25, "unit": "px", "use": false },
+				"isResponsive": false
+			}
+		},
+		"horizontalAlign": {
+			"type": "object",
+			"default": {
+				"Desktop": { "use": false },
+				"Tablet": { "use": false },
+				"Mobile": { "use": false },
+				"isResponsive": false
+			}
+		},
+		"verticalAlign": {
+			"type": "object",
+			"default": {
+				"Desktop": { "use": false },
+				"Tablet": { "use": false },
+				"Mobile": { "use": false },
+				"isResponsive": false
+			}
+		},
+		"rotate": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 0, "unit": "deg" },
+				"Tablet": { "value": 0, "unit": "deg" },
+				"Mobile": { "value": 0, "unit": "deg" },
+				"isResponsive": false
+			}
+		},
+		"width": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 400, "unit": "px" },
+				"Tablet": { "value": 400, "unit": "px" },
+				"Mobile": { "value": 400, "unit": "px" },
+				"isResponsive": false
+			}
+		},
+		"height": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 400, "unit": "px" },
+				"Tablet": { "value": 400, "unit": "px" },
+				"Mobile": { "value": 400, "unit": "px" },
+				"isResponsive": false
+			}
+		},
+		"ratio": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": ["none", null] },
+				"Tablet": { "value": ["none", null] },
+				"Mobile": { "value": ["none", null] },
+				"isResponsive": false
+			}
+		},
+		"blockName": {
+			"type": "string"
+		},
+		"backgroundType": {
+			"type": "string"
+		},
+		"bgrColor": {
+			"type": "string"
+		},
+		"customBgrColor": {
+			"type": "string"
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"customGradient": {
+			"type": "string"
+		},
+		"id": {
+			"type": "string"
+		},
+		"bgrSize": {
+			"type": "object"
+		},
+		"url": {
+			"type": "string",
+			"__experimentalRole": "content"
+		},
+		"focalPoint": {
+			"type": "object"
+		},
+		"bgrFixed": {
+			"type": "boolean"
+		},
+		"bgrRepeat": {
+			"type": "string"
+		},
+		"blendMode": {
+			"type": "string"
+		},
+		"objectFit": {
+			"type": "string"
+		},
+		"filter": {
+			"type": "array",
+			"default": [null, null, null, null, null, null]
+		},
+		"shadow": {
+			"type": "array"
+		},
+		"masks": {
+			"type": "object"
+		},
+		"borderRadius": {
+			"type": "object"
+		}
+	},
+	"usesContext": [
+		"monoblock/userSelectedColors",
+		"monoblock/userSelectedGradients",
+		"monoblock/id"
+	],
+	"textdomain": "monoblock",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

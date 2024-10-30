@@ -1,0 +1,95 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "iori/monolayer",
+	"parent": ["iori/monoblock"],
+	"title": "Movable content",
+	"category": "monoblock",
+	"version": "1.0.0",
+	"description": "Masks, free placement of blocks and more",
+	"attributes": {
+		"url": {
+			"type": "string",
+			"default": "",
+			"__experimentalRole": "content"
+		},
+		"id": {
+			"type": "number"
+		},
+		"alt": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "alt",
+			"default": ""
+		},
+		"visibility": {
+			"type": "boolean",
+			"default": true
+		},
+		"hasParallax": {
+			"type": "boolean",
+			"default": false
+		},
+		"isRepeated": {
+			"type": "boolean",
+			"default": false
+		},
+		"dimRatio": {
+			"type": "number",
+			"default": 100
+		},
+		"overlayColor": {
+			"type": "string"
+		},
+		"customOverlayColor": {
+			"type": "string"
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"customGradient": {
+			"type": "string"
+		},
+		"blur": {
+			"type": "number",
+			"default": 0
+		},
+		"backgroundType": {
+			"type": "string",
+			"default": "image"
+		},
+		"focalPoint": {
+			"type": "object"
+		},
+		"blockName": {
+			"type": "string",
+			"default": ""
+		},
+		"isDark": {
+			"type": "boolean",
+			"default": true
+		},
+		"templateLock": {
+			"type": ["string", "boolean"],
+			"enum": ["all", "insert", "contentOnly", false]
+		}
+	},
+	"usesContext": [
+		"monoblock/userSelectedColors",
+		"monoblock/userSelectedGradients",
+		"monoblock/id"
+	],
+	"supports": {
+		"html": false,
+		"color": {
+			"__experimentalDuotone": ".wp-block-iori-monolayer__image-background, .wp-block-iori-monolayer__video-background",
+			"text": false,
+			"background": false
+		}
+	},
+	"textdomain": "monoblock",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

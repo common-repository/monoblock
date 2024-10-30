@@ -1,0 +1,304 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "iori/monobutton",
+	"parent": ["iori/monolayer"],
+	"version": "1.0.0",
+	"title": "Button",
+	"category": "monoblock",
+	"description": "Customizable button.",
+	"attributes": {
+		"blockName": {
+			"type": "string"
+		},
+		"visibility": {
+			"type": "boolean",
+			"default": true
+		},
+		"styleIds": {
+			"type": "array"
+		},
+		"url": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "href"
+		},
+		"title": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "title"
+		},
+		"text": {
+			"type": "string",
+			"source": "html",
+			"selector": "a",
+			"__experimentalRole": "content"
+		},
+		"linkTarget": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "target"
+		},
+		"rel": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "rel"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"customBackgroundColor": {
+			"type": "string",
+			"default": "#32373c"
+		},
+		"hoverBackgroundColor": {
+			"type": "string"
+		},
+		"activeBackgroundColor": {
+			"type": "string"
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"customGradient": {
+			"type": "string"
+		},
+		"hoverGradient": {
+			"type": "string"
+		},
+		"activeGradient": {
+			"type": "string"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"customTextColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"hoverTextColor": {
+			"type": "string"
+		},
+		"activeTextColor": {
+			"type": "string"
+		},
+		"left": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 25, "unit": "px", "use": true },
+				"Tablet": { "value": 25, "unit": "px", "use": true },
+				"Mobile": { "value": 25, "unit": "px", "use": true },
+				"isResponsive": false
+			}
+		},
+		"right": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 25, "unit": "px", "use": false },
+				"Tablet": { "value": 25, "unit": "px", "use": false },
+				"Mobile": { "value": 25, "unit": "px", "use": false },
+				"isResponsive": false
+			}
+		},
+		"top": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 25, "unit": "px", "use": true },
+				"Tablet": { "value": 25, "unit": "px", "use": true },
+				"Mobile": { "value": 25, "unit": "px", "use": true },
+				"isResponsive": false
+			}
+		},
+		"bottom": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": 25, "unit": "px", "use": false },
+				"Tablet": { "value": 25, "unit": "px", "use": false },
+				"Mobile": { "value": 25, "unit": "px", "use": false },
+				"isResponsive": false
+			}
+		},
+		"horizontalAlign": {
+			"type": "object",
+			"default": {
+				"Desktop": { "use": false },
+				"Tablet": { "use": false },
+				"Mobile": { "use": false },
+				"isResponsive": false
+			}
+		},
+		"verticalAlign": {
+			"type": "object",
+			"default": {
+				"Desktop": { "use": false },
+				"Tablet": { "use": false },
+				"Mobile": { "use": false },
+				"isResponsive": false
+			}
+		},
+		"padding": {
+			"type": "object",
+			"default": {
+				"Desktop": {
+					"top": "0.67em",
+					"bottom": "0.67em",
+					"left": "1.33em",
+					"right": "1.33em",
+					"linked": { "v": true, "h": true }
+				},
+				"Tablet": {
+					"top": "0.67em",
+					"bottom": "0.67em",
+					"left": "1.33em",
+					"right": "1.33em",
+					"linked": { "v": true, "h": true }
+				},
+				"Mobile": {
+					"top": "0.67em",
+					"bottom": "0.67em",
+					"left": "1.33em",
+					"right": "1.33em",
+					"linked": { "v": true, "h": true }
+				},
+				"isResponsive": false
+			}
+		},
+		"paddingHover": {
+			"type": "object"
+		},
+		"paddingActive": {
+			"type": "object"
+		},
+		"border": {
+			"type": "object"
+		},
+		"borderHover": {
+			"type": "object"
+		},
+		"borderActive": {
+			"type": "object"
+		},
+		"borderRadius": {
+			"type": "object",
+			"default": {
+				"Desktop": {
+					"unit": "px",
+					"values": [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999],
+					"used": 1
+				},
+				"Tablet": {
+					"unit": "px",
+					"values": [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999],
+					"used": 1
+				},
+				"Mobile": {
+					"unit": "px",
+					"values": [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999],
+					"used": 1
+				},
+				"isResponsive": false
+			}
+		},
+		"borderRadiusHover": {
+			"type": "object"
+		},
+		"borderRadiusActive": {
+			"type": "object"
+		},
+		"boxShadow": {
+			"type": "array"
+		},
+		"boxShadowHover": {
+			"type": "array"
+		},
+		"boxShadowActive": {
+			"type": "array"
+		},
+		"transitionDuration": {
+			"type": "string",
+			"default": "0.3s"
+		},
+		"transitionFunc": {
+			"type": "string",
+			"default": "ease"
+		},
+		"transformHover": {
+			"type": "object"
+		},
+		"transformActive": {
+			"type": "object"
+		},
+		"fontSize": {
+			"type": "object",
+			"default": {
+				"Desktop": {
+					"value": 23,
+					"unit": "px",
+					"min": null,
+					"minUnit": "px",
+					"max": null,
+					"maxUnit": "px",
+					"fluid": false,
+					"minMax": false
+				},
+				"Tablet": {
+					"value": 23,
+					"unit": "px",
+					"min": null,
+					"minUnit": "px",
+					"max": null,
+					"maxUnit": "px",
+					"fluid": false,
+					"minMax": false
+				},
+				"Mobile": {
+					"value": 23,
+					"unit": "px",
+					"min": null,
+					"minUnit": "px",
+					"max": null,
+					"maxUnit": "px",
+					"fluid": false,
+					"minMax": false
+				},
+				"isResponsive": false
+			}
+		},
+		"fontFamily": {
+			"type": "string"
+		},
+		"fontStyle": {
+			"type": "string"
+		},
+		"fontWeight": {
+			"type": "string"
+		},
+		"letterSpacing": {
+			"type": "string"
+		},
+		"textDecoration": {
+			"type": "string"
+		},
+		"textTransform": {
+			"type": "string"
+		}
+	},
+	"usesContext": [
+		"monoblock/userSelectedColors",
+		"monoblock/userSelectedGradients",
+		"monoblock/id"
+	],
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"reusable": false
+	},
+	"textdomain": "monoblock",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

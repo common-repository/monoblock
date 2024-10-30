@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "iori/monoblock",
+	"title": "Monoblock",
+	"category": "media",
+	"version": "1.0.0",
+	"description": "Cover block with custom background mask and layers",
+	"attributes": {
+		"id": {
+			"type": "string"
+		},
+		"minHeight": {
+			"type": "object",
+			"default": {
+				"Desktop": { "value": null, "unit": "" },
+				"Tablet": { "value": null, "unit": "" },
+				"Mobile": { "value": null, "unit": "" },
+				"isResponsive": false
+			}
+		},
+		"templateLock": {
+			"type": ["string", "boolean"],
+			"enum": ["all", "insert", "contentOnly", false]
+		},
+		"userSelectedColors": {
+			"type": "array",
+			"default": []
+		},
+		"userSelectedGradients": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"providesContext": {
+		"monoblock/userSelectedColors": "userSelectedColors",
+		"monoblock/userSelectedGradients": "userSelectedGradients",
+		"monoblock/id": "id"
+	},
+	"supports": {
+		"anchor": true,
+		"align": ["full", "wide"],
+		"html": false
+	},
+	"textdomain": "monoblock",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

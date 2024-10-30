@@ -1,0 +1,65 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "iori/monobase",
+	"parent": ["iori/monoblock"],
+	"title": "Standard",
+	"category": "monoblock",
+	"version": "1.0.0",
+	"description": "For easy content placement",
+	"attributes": {
+		"visibility": {
+			"type": "boolean",
+			"default": true
+		},
+		"dimRatio": {
+			"type": "number",
+			"default": 100
+		},
+		"blockName": {
+			"type": "string",
+			"default": ""
+		},
+		"container": {
+			"type": "boolean",
+			"default": false
+		},
+		"containerWidth": {
+			"type": "number",
+			"default": 1200
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"customGradient": {
+			"type": "string"
+		},
+		"contentPosition": {
+			"type": "string"
+		},
+		"overlayColor": {
+			"type": "string"
+		},
+		"customOverlayColor": {
+			"type": "string"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"customTextColor": {
+			"type": "string"
+		}
+	},
+	"usesContext": [
+		"monoblock/userSelectedColors",
+		"monoblock/userSelectedGradients",
+		"monoblock/id"
+	],
+	"supports": {
+		"html": false
+	},
+	"textdomain": "monoblock",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
